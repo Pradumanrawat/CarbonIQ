@@ -6,9 +6,7 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { z } from "zod";
 import axios from "axios";
 
-// --------------------
-// Initialize LLM
-// --------------------
+
 const model = new ChatGoogleGenerativeAI({
   model: "models/gemini-2.5-flash",
   maxOutputTokens: 2048,
@@ -16,9 +14,7 @@ const model = new ChatGoogleGenerativeAI({
   apiKey: process.env.GOOGLE_API_KEY,
 });
 
-// --------------------
-// Tools
-// --------------------
+
 const computeUserEmission = new DynamicStructuredTool({
   name: "computeUserEmission",
   description: "Extract user emission data (distance, vehicle, electricity usage) from text",
@@ -110,9 +106,7 @@ const carboncredit = new DynamicStructuredTool({
   }),
   func: async ({ text }) => {
     try {
-      // ------------------------------
-      // Step 1: Try getting from API
-      // ------------------------------
+      
       const response = await axios.get("https://v17.api.carbonmark.com/purchases");
       const data = response.data;
 
@@ -120,12 +114,12 @@ const carboncredit = new DynamicStructuredTool({
         throw new Error("Invalid data from API");
       }
 
-      // Extract all available countries
+     
       const countries = [
         ...new Set(data.map((item) => item.listing?.project?.country).filter(Boolean)),
       ];
 
-      // Normalize input
+      
       const normalizedText = text.toLowerCase().replace(/[^a-z]/g, "");
       const countryMatch = countries.find((c) =>
         normalizedText.includes(c.toLowerCase().replace(/[^a-z]/g, ""))
@@ -152,9 +146,7 @@ const carboncredit = new DynamicStructuredTool({
         }
       };
 
-      // ------------------------------
-      // Step 2: API search logic
-      // ------------------------------
+      
       if (countryMatch) {
         const filtered = data.filter(
           (item) =>
@@ -185,9 +177,7 @@ const carboncredit = new DynamicStructuredTool({
         };
       }
 
-      // ------------------------------
-      // Step 3: No country match → fallback to LLM
-      // ------------------------------
+  
       const llmFallback = await askLLMForPrice(
         `What is the current average global carbon credit price?`
       );
@@ -216,9 +206,6 @@ const carboncredit = new DynamicStructuredTool({
 });
 
 
-// --------------------
-// Role-specific prompts
-// --------------------
 const getPromptForRole = (role) => {
   const normalizedRole = role.toLowerCase();
 
@@ -272,14 +259,8 @@ Your role: ${role}.
   ]);
 };
 
-// --------------------
-// Executor Cache
-// --------------------
 let executorPromises = { generaluser: null, minemanager: null };
 
-// --------------------
-// Get Executor by Role
-// --------------------
 export async function getAgentExecutor(role = "general user") {
   const normalizedRole = role.toLowerCase().replace(/\s/g, "");
   if (executorPromises[normalizedRole]) return executorPromises[normalizedRole];

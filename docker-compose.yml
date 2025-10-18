@@ -3,18 +3,11 @@ version: '3.9'
 
 services:
   app:
-    build:
-      context: .
-      args:
-        - GOOGLE_API_KEY
-        - JWT_SECRET
-        - NEXT_PUBLIC_BASE_URL
-        - TAVILY_API_KEY
-        - MONGO_URI
+    build: .
     ports:
       - "3000:3000"
     env_file:
-      - .env
+      - .env        # Load all keys at runtime
     depends_on:
       - mongo
 
