@@ -1,6 +1,9 @@
 # CarbonIQ - Carbon Emission Management System
 
-A comprehensive web application for managing and tracking carbon emissions for both individuals and mining operations.
+CarbonIQ is an AI-driven sustainability assistant that calculates a user’s carbon footprint based on travel, electricity usage, and renewable energy consumption.
+It integrates LangChain agents and structured tools to combine LLM reasoning with backend emission data from custom APIs.
+The chatbot can also fetch real-time environmental updates and eco-friendly recommendations using web search integration.
+
 
 ## Features
 
@@ -22,10 +25,10 @@ A comprehensive web application for managing and tracking carbon emissions for b
 ## Technology Stack
 
 - **Frontend**: Next.js 15, React 19, Tailwind CSS
-- **Backend**: Next.js API Routes
+- **Backend**: Next.js API Routes,Langchain
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JWT-based authentication
-- **Styling**: Tailwind CSS for responsive design
+- 
 
 ## API Endpoints
 
