@@ -1,0 +1,27 @@
+
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY}"
+      JWT_SECRET: "${JWT_SECRET}"
+      NEXT_PUBLIC_BASE_URL: "${NEXT_PUBLIC_BASE_URL}"
+      TAVILY_API_KEY: "${TAVILY_API_KEY}"
+      MONGO_URI: "${MONGO_URI}"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

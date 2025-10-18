@@ -1,0 +1,244 @@
+
+/* Reset and base layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #112117;
+}
+
+.recommendations {
+  background: rgba(29, 201, 98, 0.1);
+  backdrop-filter: blur(8px);
+  border-left: 4px solid #1dc962; /* accent border */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  color: #e6ffe6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.recommendations h4 {
+  margin: 0 0 0.75rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1dc962;
+  border-bottom: 1px solid rgba(29, 201, 98, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.recommendations-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #d4ffd4;
+}
+
+.recommendations-item::before {
+  content: "✔"; /* optional icon */
+  color: #1dc962;
+  font-weight: bold;
+}
+
+/* Container */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Section */
+.calculator-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-top: 80px; /* offset for header */
+  background: linear-gradient(
+      to top,
+      rgba(17, 33, 23, 0.9),
+      rgba(17, 33, 23, 0.8)
+    ),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuABN6Jb_q1RxnczU_tMgt7SOUNhjws25raDJhZdmuONBc0ZGFKDwgHK5p8j5rpL2O6drzPvqoc6-ZWJwxGrppLN-rJwUhAj6LdQ3IjJf-PFYOfMW6SdE8-JZxnTP0X8NSOF7QGymSpOy7y4aNM1FiXp0Sqz40gJQ_VUUhAMNixbKukRPtDWcs3z42Qhk_3xjQYmz_EiQCSLBH07nEt-_S8IppE-5bwl0P7F_ZspNpaIy8PiwvNKVBImKGXI7N2rBlrd7_2ZIgcjj0YF")
+      center/cover no-repeat;
+  min-height: calc(100vh - 80px);
+}
+
+/* Remove number input spinners */
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Calculator Box */
+.calculator-box {
+  background-color: rgba(17, 33, 23, 0.75);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  width: 95%;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Heading & Text */
+.calculator-box h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.calculator-box p {
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+}
+
+/* Form - stacked fields */
+.calculator-form {
+  display: flex;
+  flex-direction: column; /* stack fields vertically */
+  gap: 1rem;
+  text-align: left;
+}
+
+.calculator-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-form label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Inputs */
+.calculator-form input,
+.calculator-form select {
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: green;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  
+}
+
+.calculator-form input::placeholder,
+.calculator-form select option {
+  color: green;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+  border-color: #1dc962;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Submit Button */
+.calculator-form button.btn-submit {
+  margin-top: 1.5rem;
+  padding: 0.85rem;
+  background-color: #1dc962;
+  color: #112117;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.calculator-form button.btn-submit:hover {
+  transform: scale(1.05);
+  background-color: #18b556;
+}
+
+/* Result Card */
+.result-card {
+  background-color: rgba(29, 201, 98, 0.1);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: green;
+}
+
+.result-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #1dc962;
+}
+
+.result-card p {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-weight: bold;
+  color: #1dc962;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator-box {
+    padding: 2rem;
+  }
+
+  .calculator-box h1 {
+    font-size: 1.75rem;
+  }
+
+  .calculator-box p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-box {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .calculator-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .calculator-box p {
+    font-size: 0.9rem;
+  }
+
+  .calculator-form button.btn-submit {
+    font-size: 0.95rem;
+  }
+
+  .result-card p {
+    font-size: 1.1rem;
+    
+  }
+}

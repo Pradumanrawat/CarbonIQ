@@ -1,0 +1,349 @@
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Navbar container */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #112117;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1dc962;
+  text-decoration: none;
+}
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right:35px ;
+}
+
+/* User initializer */
+.user-initializer {
+  width: 40px;
+  height: 40px;
+  background-color: #1dc962;
+  color: #112117;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Common button styles */
+button, .button-login, .button-signup, .button-chat {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login button */
+.button-login {
+  background-color: #d4f0e0;
+  color: #1dc962;
+  border: 2px solid #1dc962;
+}
+.button-login:hover {
+  background-color: #b2e6c7;
+  color: #112117;
+}
+
+/* Signup button */
+.button-signup {
+  background-color: #1dc962;
+  color: #fff;
+  border: 2px solid #1dc962;
+}
+.button-signup:hover {
+  background-color: #17b85a;
+}
+
+/* Chat button */
+.button-chat {
+  background-color: #1dc962;
+  color: #112117;
+}
+.button-chat:hover {
+  background-color: #17b85a;
+}
+
+/* Logout button */
+.button-logout {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: 2px solid #ff4d4d;
+}
+.button-logout:hover {
+  background-color: #e03e3e;
+}
+
+
+/* Login button */
+.button-login {
+  background-color: #d4f0e0;
+  color: #1dc962;
+  border: 2px solid #1dc962;
+}
+.button-login:hover {
+  background-color: #b2e6c7;
+  color: #112117;
+}
+
+/* Signup button */
+.button-signup {
+  background-color: #1dc962;
+  color: #fff;
+  border: 2px solid #1dc962;
+}
+.button-signup:hover {
+  background-color: #17b85a;
+}
+
+/* Chat button */
+.button-chat {
+  background-color: #1dc962;
+  color: #112117;
+}
+.button-chat:hover {
+  background-color: #17b85a;
+}
+
+/* Logout button */
+.button-logout {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: 2px solid #ff4d4d;
+}
+.button-logout:hover {
+  background-color: #e03e3e;
+}
+
+
+
+/* Navbar Base */
+.landing-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(17, 33, 23, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  height: 50px;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.logo h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* Prevent wrapping on small devices */
+}
+
+.logo-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #1dc962;
+}
+
+/* Buttons Section */
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0; /* Prevent collapsing */
+}
+
+/* Common button styles */
+
+
+/* Login Button */
+.button-login {
+  background-color: rgba(29, 201, 98, 0.2);
+  color: #1dc962;
+}
+.button-chat{
+   background-color: rgba(29, 201, 98, 0.2);
+  color: #1dc962;
+  padding: 15px;
+}
+.button-chat:hover {
+  background-color: rgba(29, 201, 98, 0.35);
+}
+
+.button-login:hover {
+  background-color: rgba(29, 201, 98, 0.35);
+}
+
+/* Signup Button */
+.button-signup {
+  background-color: #1dc962;
+  color: #112117;
+}
+
+.button-signup:hover {
+  background-color: #16b958;
+}
+
+
+/* User Info Container */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+/* Avatar Circle */
+.user-avatar {
+  background-color: rgb(0, 34, 128);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* Logout Button — aligned inline */
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVENESS */
+/* ========================= */
+
+/* 📱 Small Devices (Phones < 640px) */
+@media (max-width: 639px) {
+  .landing-header {
+    padding: 0.6rem 1rem;
+    justify-content: space-between;
+  }
+
+  .logo h2 {
+    font-size: 1rem;
+  }
+
+  .button-login,
+  .button-signup {
+    min-width: 60px;
+    height: 2rem;
+    font-size: 0.75rem;
+    padding: 0 0.6rem;
+  }
+
+  .buttons-container {
+    gap: 0.4rem;
+  }
+}
+
+/* 💻 Medium Devices (Tablets 640px - 1024px) */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .landing-header {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .button-login,
+  .button-signup {
+    min-width: 90px;
+    height: 2.3rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* 🖥️ Large Devices (Desktops > 1024px) */
+@media (min-width: 1025px) {
+  .landing-header {
+    padding: 1.2rem 3rem;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .button-login,
+  .button-signup {
+    min-width: 120px;
+    height: 2.6rem;
+    font-size: 1rem;
+  }
+}
+
+

@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+.logo{
+  font-weight: 800;
+  font-size: 2rem;
+  color: #17b856;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.sidebar {
+  width: 250px;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background-color: #3b82f6;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background-color: #ef4444;
+  text-align: center;
+}
+
+.dashboard-main {
+  flex: 1;
+  background-color: #f8fafc;
+  padding: 30px;
+}
+
+.section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 24px;
+}
+
+
+
+/* === Section Container === */
+.section {
+  padding: 30px;
+  background-color: #112117;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* === Section Heading === */
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1dc962;
+}
+
+/* === Form Wrapper === */
+.form-wrapper {
+  background: rgba(17, 33, 23, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* === Form Heading === */
+.form-wrapper p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+}
+
+.mine-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mine-form h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+}
+
+/* === Inputs === */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+  color: black;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* === Carbon Sink === */
+.carbon-sink {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* === Button === */
+.btn-calculate {
+  margin-top: 20px;
+  background-color: #1dc962;
+  color: #112117;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-calculate:hover {
+  transform: scale(1.05);
+  background-color: #17b856;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .carbon-sink {
+    grid-template-columns: 1fr;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+}

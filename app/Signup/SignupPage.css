@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #112117;
+  color: #fff;
+}
+
+/* Container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+
+/* Main Section */
+.signup-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to top,
+      rgba(17, 33, 23, 0.8),
+      rgba(17, 33, 23, 0.6)
+    ),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuABN6Jb_q1RxnczU_tMgt7SOUNhjws25raDJhZdmuONBc0ZGFKDwgHK5p8j5rpL2O6drzPvqoc6-ZWJwxGrppLN-rJwUhAj6LdQ3IjJf-PFYOfMW6SdE8-JZxnTP0X8NSOF7QGymSpOy7y4aNM1FiXp0Sqz40gJQ_VUUhAMNixbKukRPtDWcs3z42Qhk_3xjQYmz_EiQCSLBH07nEt-_S8IppE-5bwl0P7F_ZspNpaIy8PiwvNKVBImKGXI7N2rBlrd7_2ZIgcjj0YF")
+      center/cover no-repeat;
+  padding-top: 80px; /* prevent header overlap */
+}
+
+
+.signup-box {
+  background-color: rgba(17, 33, 23, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.signup-box h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.signup-box p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+
+.role-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.role-switch button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.role-switch button.active {
+  background-color: #1dc962;
+  color: #112117;
+}
+
+/* Form */
+.signup-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-bottom: 0.3rem;
+text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #1dc962;
+}
+
+/* Submit Button */
+.btn-submit {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #1dc962;
+  color: #112117;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+}

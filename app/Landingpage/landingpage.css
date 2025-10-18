@@ -1,0 +1,179 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.landing-grow {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Header */
+
+
+/* Main section */
+.landing-main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  min-height: 100vh; /* changed from calc to 100vh */
+  margin-top: 80px; /* offset for fixed header height */
+  width: 100%;
+}
+
+.landing-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 10;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.landing-text h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .landing-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing-text h1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-text h1 {
+    font-size: 4.5rem;
+  }
+}
+
+.landing-text .text-primary {
+  color: #1dc962;
+}
+
+.landing-text p {
+  max-width: 32rem;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+}
+
+
+
+@media (min-width: 640px) {
+  .landing-buttons {
+    flex-direction: row;
+  }
+}
+
+.landing-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.landing-buttons a:first-child {
+  background-color: #1dc962;
+  color: #112117;
+}
+
+.landing-buttons a:first-child:hover {
+  transform: scale(1.05);
+}
+
+.landing-buttons a:last-child {
+  background-color: rgba(29, 201, 98, 0.2);
+  color: #fff;
+}
+
+.landing-buttons a:last-child:hover {
+  background-color: rgba(29, 201, 98, 0.3);
+  transform: scale(1.05);
+}
+
+
+.landing-buttons {
+  display: flex;
+  
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.landing-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  width: 80%;
+  max-width: 250px;
+}
+
+/* Primary Button */
+.landing-button.primary {
+  background-color: #1dc962;
+  color: #112117;
+}
+
+.landing-button.primary:hover {
+  transform: scale(1.05);
+  background-color: #18b556;
+}
+
+/* Secondary Button */
+.landing-button.secondary {
+  background-color: rgba(29, 201, 98, 0.2);
+  color: #fff;
+}
+
+.landing-button.secondary:hover {
+  background-color: rgba(29, 201, 98, 0.3);
+  transform: scale(1.05);
+}

@@ -1,0 +1,34 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.57",
+    "@langchain/core": "^0.3.78",
+    "@langchain/google-genai": "^0.2.18",
+    "axios": "^1.12.2",
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "langchain": "^0.3.35",
+    "mongoose": "^8.18.3",
+    "next": "15.5.4",
+    "next-auth": "^4.24.11",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0"
+  }
+}

@@ -1,0 +1,210 @@
+body,html{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+.result-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.result-card {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-card.status-positive { background-color: #d4edda; color: #155724; }
+.status-card.status-negative { background-color: #cce5ff; color: #004085; }
+
+.result-card ul { padding-left: 20px; margin: 0; }
+.result-card li { margin-bottom: 5px; }
+
+
+
+
+
+
+
+/* Mineemission.css */
+
+/* Result container wraps all result cards */
+.result-container {
+  display: flex;
+  flex-wrap: wrap; /* allows cards to move to next line if not enough space */
+  gap: 16px;       /* space between cards */
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+/* Each individual result card */
+.result-card {
+  background-color: #f7f9fc;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1 1 200px; /* flexible width, but no smaller than 200px */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  word-wrap: break-word; /* handle long text without breaking layout */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Title inside card */
+.result-card h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* Value inside card */
+.result-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Optional: color coding for status if you have it */
+.status-low {
+  background-color: #d1fae5;
+  border-color: #10b981;
+}
+.status-medium {
+  background-color: #fef3c7;
+  border-color: #f59e0b;
+}
+.status-high {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* Error box */
+.error-box {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 500;
+  max-width: 400px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f0f9ff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.result-subcard {
+  background: #fff;
+  border-left: 4px solid #007acc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.result-subcard h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #007acc;
+}
+
+.result-subcard p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Status color coding */
+.status-low { border-left-color: #28a745; }
+.status-moderate { border-left-color: #ffc107; }
+.status-high { border-left-color: #dc3545; }
+
+.recommendation {
+  border-left-color: #4caf50;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+.form-wrapper {
+  background:white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: black;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  font-weight: 900;
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: black;
+}
+.btn-calculate {
+  background: #0984e3;
+  color:black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-calculate:hover {
+  background: #74b9ff;
+}
+.result-box {
+  margin-top: 20px;
+  background: #dfe6e9;
+  padding: 15px;
+  border-radius: 8px;
+}
+.error-box {
+  color: red;
+  margin-top: 10px;
+}
